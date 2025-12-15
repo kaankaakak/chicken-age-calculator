@@ -1,2 +1,2 @@
-# chicken-age-calculator
-Civciv yaş hesaplayıcı Android uygulaması
+# Civciv Yaş Hesaplayıcı
+Android uygulaması - Civciv yaşını hesaplar
