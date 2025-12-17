@@ -2,48 +2,31 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
-
 android {
     namespace 'com.example.chickenagecalculator'
     compileSdk 34
-    
     defaultConfig {
         applicationId "com.example.chickenagecalculator"
-        minSdk 21
+        minSdk 24
         targetSdk 34
         versionCode 1
         versionName "1.0"
-        
-        // testInstrumentationRunner kaldıralım (eski olabilir)
     }
-    
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
-    
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
-    
-    // AŞAĞIDAKİ BLOKLARI KESİNLİKLE KALDIRIN (ESKİ):
-    // dexOptions { ... }
-    // lintOptions { ... } (eski sürümleri)
-    // testOptions { ... } (eski sürümleri)
 }
-
 dependencies {
-    implementation 'androidx.core:core-ktx:1.10.0'
+    implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    
-    // testImplementation satırlarını kaldırın (eski olabilir)
-    // androidTestImplementation satırlarını kaldırın
+    implementation 'com.google.android.material:material:1.11.0'
 }
