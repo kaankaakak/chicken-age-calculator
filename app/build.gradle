@@ -13,6 +13,8 @@ android {
         targetSdk 34
         versionCode 1
         versionName "1.0"
+        
+        // testInstrumentationRunner kaldıralım (eski olabilir)
     }
     
     buildTypes {
@@ -30,10 +32,18 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    
+    // AŞAĞIDAKİ BLOKLARI KESİNLİKLE KALDIRIN (ESKİ):
+    // dexOptions { ... }
+    // lintOptions { ... } (eski sürümleri)
+    // testOptions { ... } (eski sürümleri)
 }
 
 dependencies {
     implementation 'androidx.core:core-ktx:1.10.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
+    
+    // testImplementation satırlarını kaldırın (eski olabilir)
+    // androidTestImplementation satırlarını kaldırın
 }
